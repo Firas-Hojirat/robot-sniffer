@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.6 on linux)" generated="20180926 15:44:48.395">
+<suite id="s1" name="Robot-Sniffer" source="/home/firas/robot-sniffer/src/robot-sniffer.robot">
+<test id="s1-t1" name="Login To Kissanime">
+<kw name="Start Sniffing" type="setup">
+<kw name="Sniff" library="pcap.Pcap">
+<arguments>
+<arg>${host}</arg>
+<arg>${uri}</arg>
+</arguments>
+<status status="PASS" starttime="20180926 15:44:50.425" endtime="20180926 15:44:50.428"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumUtil">
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<status status="PASS" starttime="20180926 15:44:50.429" endtime="20180926 15:44:51.001"></status>
+</kw>
+<status status="PASS" starttime="20180926 15:44:50.424" endtime="20180926 15:44:51.001"></status>
+</kw>
+<kw name="Login As User" library="poms.HomePage">
+<status status="PASS" starttime="20180926 15:44:51.002" endtime="20180926 15:45:05.852"></status>
+</kw>
+<kw name="Insert User Name" library="poms.LoginPage">
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<status status="PASS" starttime="20180926 15:45:05.853" endtime="20180926 15:45:06.432"></status>
+</kw>
+<kw name="Insert Password" library="poms.LoginPage">
+<arguments>
+<arg>${pass}</arg>
+</arguments>
+<status status="PASS" starttime="20180926 15:45:06.432" endtime="20180926 15:45:06.738"></status>
+</kw>
+<kw name="Sign In" library="poms.LoginPage">
+<status status="PASS" starttime="20180926 15:45:06.738" endtime="20180926 15:45:16.634"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumUtil" type="teardown">
+<status status="PASS" starttime="20180926 15:45:16.634" endtime="20180926 15:45:16.708"></status>
+</kw>
+<status status="PASS" starttime="20180926 15:44:50.423" endtime="20180926 15:45:16.708" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20180926 15:44:48.396" endtime="20180926 15:45:16.709"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Robot-Sniffer">Robot-Sniffer</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
