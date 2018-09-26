@@ -21,10 +21,9 @@ Login To Kissanime
     login as user
     insert user name    ${user}
     insert password     ${pass}
-    sign in
-#    &{cred} =           sign in
-#    should be equal     &{cred}[username]  ${user}
-#    should be equal     &{cred}[password]  ${pass}
+    &{cred} =           sign in
+    should be equal     &{cred}[username]  ${user}
+    should be equal     &{cred}[password]  ${pass}
 
 
 *** keywords ***

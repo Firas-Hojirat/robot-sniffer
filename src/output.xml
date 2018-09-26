@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.6.6 on linux)" generated="20180926 15:44:48.395">
+<robot generator="Robot 3.0.4 (Python 3.6.6 on linux)" generated="20180926 16:16:55.262">
 <suite id="s1" name="Robot-Sniffer" source="/home/firas/robot-sniffer/src/robot-sniffer.robot">
 <test id="s1-t1" name="Login To Kissanime">
 <kw name="Start Sniffing" type="setup">
@@ -8,40 +8,60 @@
 <arg>${host}</arg>
 <arg>${uri}</arg>
 </arguments>
-<status status="PASS" starttime="20180926 15:44:50.425" endtime="20180926 15:44:50.428"></status>
+<status status="PASS" starttime="20180926 16:16:57.088" endtime="20180926 16:16:57.091"></status>
 </kw>
 <kw name="Open Browser" library="SeleniumUtil">
 <arguments>
 <arg>${url}</arg>
 </arguments>
-<status status="PASS" starttime="20180926 15:44:50.429" endtime="20180926 15:44:51.001"></status>
+<status status="PASS" starttime="20180926 16:16:57.092" endtime="20180926 16:16:57.492"></status>
 </kw>
-<status status="PASS" starttime="20180926 15:44:50.424" endtime="20180926 15:44:51.001"></status>
+<status status="PASS" starttime="20180926 16:16:57.088" endtime="20180926 16:16:57.497"></status>
 </kw>
 <kw name="Login As User" library="poms.HomePage">
-<status status="PASS" starttime="20180926 15:44:51.002" endtime="20180926 15:45:05.852"></status>
+<status status="PASS" starttime="20180926 16:16:57.501" endtime="20180926 16:17:11.663"></status>
 </kw>
 <kw name="Insert User Name" library="poms.LoginPage">
 <arguments>
 <arg>${user}</arg>
 </arguments>
-<status status="PASS" starttime="20180926 15:45:05.853" endtime="20180926 15:45:06.432"></status>
+<status status="PASS" starttime="20180926 16:17:11.664" endtime="20180926 16:17:11.904"></status>
 </kw>
 <kw name="Insert Password" library="poms.LoginPage">
 <arguments>
 <arg>${pass}</arg>
 </arguments>
-<status status="PASS" starttime="20180926 15:45:06.432" endtime="20180926 15:45:06.738"></status>
+<status status="PASS" starttime="20180926 16:17:11.904" endtime="20180926 16:17:13.174"></status>
 </kw>
 <kw name="Sign In" library="poms.LoginPage">
-<status status="PASS" starttime="20180926 15:45:06.738" endtime="20180926 15:45:16.634"></status>
+<assign>
+<var>&amp;{cred}</var>
+</assign>
+<msg timestamp="20180926 16:17:23.014" level="INFO">&amp;{cred} = { username=johndoe111405 | password=Fall#n14 | redirect= }</msg>
+<status status="PASS" starttime="20180926 16:17:13.174" endtime="20180926 16:17:23.014"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>&amp;{cred}[username]</arg>
+<arg>${user}</arg>
+</arguments>
+<status status="PASS" starttime="20180926 16:17:23.014" endtime="20180926 16:17:23.015"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>&amp;{cred}[password]</arg>
+<arg>${pass}</arg>
+</arguments>
+<status status="PASS" starttime="20180926 16:17:23.015" endtime="20180926 16:17:23.016"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumUtil" type="teardown">
-<status status="PASS" starttime="20180926 15:45:16.634" endtime="20180926 15:45:16.708"></status>
+<status status="PASS" starttime="20180926 16:17:23.018" endtime="20180926 16:17:23.097"></status>
 </kw>
-<status status="PASS" starttime="20180926 15:44:50.423" endtime="20180926 15:45:16.708" critical="yes"></status>
+<status status="PASS" starttime="20180926 16:16:57.087" endtime="20180926 16:17:23.097" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20180926 15:44:48.396" endtime="20180926 15:45:16.709"></status>
+<status status="PASS" starttime="20180926 16:16:55.264" endtime="20180926 16:17:23.098"></status>
 </suite>
 <statistics>
 <total>

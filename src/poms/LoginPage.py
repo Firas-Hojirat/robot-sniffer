@@ -30,6 +30,6 @@ class LoginPage(BasePage):
         SeleniumUtil.wait_for_element_presence(LoginPage.user)
         time.sleep(3)
 
-        BuiltIn().log_to_console(Pcap.QUEUE.get())
-        # return Pcap.QUEUE.get()
+        # BuiltIn().log_to_console(Pcap.QUEUE.get())
+        return Pcap.QUEUE.get()
 
