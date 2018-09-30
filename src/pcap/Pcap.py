@@ -21,7 +21,8 @@ def _sniffer_thread(dest_host, uri="/", protocol='http', iface='wlp4s0'):
         BuiltIn().log_to_console(message.request_uri)
         if message.request_method == 'POST' and message.request_uri == uri:
             QUEUE.put(HttpParser.parse_url_encoding(message))
-            return
+            break
+    capture.close()
 
 
 def sniff(dest_host, uri="/", protocol='http', iface='wlp4s0'):
